@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Muskingum Flood Model</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>Muskingum Flood Model</h1>
+        <form id="dataForm">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Inflow</th>
+                        <th>Outflow</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically here -->
+                </tbody>
+            </table>
+            <button type="button" id="addRow">Add Row</button>
+            <button type="button" id="removeRow">Remove Row</button>
+            <br /><br />
+            <label for="weightFactor">Select Weight Factor (x):</label>
+            <select name="weightFactor" id="weightFactor">
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+            </select>
+            <br /><br />
+            <button type="submit">Submit Data</button>
+        </form>
+
+        <!-- Divs for Graphs -->
+
+        <canvas id="storageFluxChart"></canvas>
+        <canvas id="hydrographChart"></canvas>
+
+        <!-- Div for Results Table -->
+        <table id="resultsTable"></table>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </body>
+</html>
